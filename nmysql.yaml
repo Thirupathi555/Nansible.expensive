@@ -6,11 +6,9 @@
     login_host: 54.162.27.179
   tasks:
   - name: ansible to install pymysql
-    ansible.builtin.pip:
-      name:
-      - PyMySQL
-      executable: pip3.9
-  - name: install MySQL Server
+    ansible.builtin.command: dnf install pip -y
+    ansible.builtin.command: dnf install PyMySQL -y
+  - name: install MySQL Server 
     ansible.builtin.package:
       name: mysql-server
       state: present
