@@ -46,8 +46,8 @@
 
   - name: copy backend service
     ansible.builtin.copy:
-      src: Nbackend.service
-      dest: /etc/systemd/system/Nbackend.service
+      src: backend.service
+      dest: /etc/systemd/system/backend.service
 
   - name: ansible to install pymysql
     ansible.builtin.pip:
