@@ -2,7 +2,7 @@
   hosts: mysql
   become: yes
   vars:
-    mysql_root_password: root
+    mysql_root_password: Talent@12345
     login_host: 54.162.27.179
   tasks:
   - name: ansible to install pymysql
