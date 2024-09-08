@@ -3,7 +3,7 @@
   become: yes
   vars:
     mysql_root_password: ExpenseApp@1
-    login_host: mysql.daws81s.online
+    login_host: mysql.thirupathis.online
   tasks:
   - name: disable default nodejs
     ansible.builtin.command: dnf module disable nodejs -y
@@ -69,4 +69,4 @@
     ansible.builtin.systemd_service:
       daemon_reload: true
       state: restarted
-    name: backend
+      name: backend
